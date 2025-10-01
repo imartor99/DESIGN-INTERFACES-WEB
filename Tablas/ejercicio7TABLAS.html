@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Práctico con Tablas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .header-cell {
+            height: 150px;
+        }
+
+        .ipod-image {
+            max-height: 100%;
+            width: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        td ul {
+            padding: 0;
+            margin: 0;
+            text-align: left;
+            display: inline-block;
+        }
+
+        th {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Ejercicio práctico con Tablas</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <td rowspan="1" colspan="1" class="header-cell"></td>
+                <td colspan="3" class="header-cell">
+                    <img src="/Tablas/120_ipod.png" alt="iPod azul" class="ipod-image">
+                </td>
+                <td colspan="2" class="header-cell">
+                    <img src="/Tablas/100_ipod.png" alt="iPod blanco" class="ipod-image">
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Capacidad</th>
+                <td>2GB</td>
+                <td>4GB</td>
+                <td>8GB</td>
+                <td>32GB</td>
+                <td>2GB</td>
+            </tr>
+
+            <tr>
+                <th rowspan="2">Colores</th>
+                <td><strong>Blanco</strong></td>
+                <td>
+                    <ul>
+                        <li>Negro</li>
+                        <li>Rosa</li>
+                        <li>Dorado</li>
+                    </ul>
+                </td>
+                <td><strong>Negro</strong></td>
+                <td colspan="2" rowspan="2">
+                    <ul>
+                        <li><strong>Negro</strong></li>
+                        <li><strong>Blanco</strong></li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+            </tr>
+
+            <tr>
+                <th>Pantalla</th>
+                <td colspan="3"><strong>3 pulgadas</strong></td>
+                <td colspan="2"><strong>7 pulgadas</strong></td>
+            </tr>
+
+            <tr>
+                <th rowspan="2">Tiempo de Carga</th>
+                <td colspan="3" rowspan="2"><strong>1 hora</strong></td>
+                <td colspan="2"><strong>5 horas</strong></td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><strong>30 minutos para 75%</strong></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
