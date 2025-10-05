@@ -1,42 +1,41 @@
 <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 6 - Clases y Bordes Modificados</title>
-    <style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejercicio 6 - Clases y Bordes Modificados</title>
+<style>
+    .tabla-principal {
+        width: 50%;
+        border-collapse: collapse;
+    }
 
-        .tabla-principal {
-            width: 50%;
-            border-collapse: collapse; 
-        }
+    .tabla-principal td {
+        padding: 14px;
+        border: 3px solid black;
 
-        .tabla-principal td {
-            padding: 14px;
-            border: 3px solid black; 
-            
-        }
+    }
 
-        
-        .tabla-contenedora {
-            width: 100%;
-            border-collapse: collapse; 
-        }
 
-        .tabla-contenedora td {
-            border: 2px solid black; 
-        }
+    .tabla-contenedora {
+        width: 100%;
+        border-collapse: collapse;
+    }
 
-        .tabla-anidada {
-            width: 100%;
-        }
+    .tabla-contenedora td {
+        border: 2px solid black;
+    }
 
-        .tabla-anidada td {
-            padding: 13px;
-        }
+    .tabla-anidada {
+        width: 100%;
+    }
 
-        .celda-amarilla {
-            background-color: yellow;
-            border: 1px solid black; 
-        }
-    </style>
+    .tabla-anidada td {
+        padding: 13px;
+    }
+
+    .celda-amarilla {
+        background-color: yellow;
+        border: 1px solid black;
+    }
+</style>
 </head>
 
 <body>
@@ -63,9 +62,9 @@
             <td colspan="5"></td>
         </tr>
     </table>
-    
+
     <br><br><br>
-    
+
     <table class="tabla-contenedora">
         <tr>
             <td colspan="2" style="width: 8%;"></td>
