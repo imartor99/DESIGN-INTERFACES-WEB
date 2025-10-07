@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 - Formularios</title>
+    <h1>Formularios en HTML5</h1>
+</head>
+
+<body>
+
+    <form action="" method="post">
+        <p>Profesora: Ana Fuentes</p>
+    </form>
+
+    <label for="">Tu nombre:(*)</label><br>
+    <input type="text" name="nombre" required><br><br>
+
+    <label for="">Correo electrónico:(*)</label><br>
+    <input type="text" name="email" required> <br><br>
+
+    <label for="">Contraseña:(*)</label><br>
+    <input type="password" name="password" required> <br><br>
+
+    <label for="">Fecha nacimiento:(*)</label><br>
+    <input type="date" name="birthday" required> <br><br>
+
+    <label for="">¿Qué hora es?</label>
+    <input type="time" name="time"><br><br>
+
+    <label for="">¿En qué mes estamos?</label>
+    <input type="month" name="mes"><br><br>
+
+    <label for="">Selecciona tu personaje preferido:</label><br>
+    <input type="radio" name="eleccion" value="Flash Gordon">Flash gordon<br>
+    <input type="radio" name="eleccion" value="Ming, el despiadado">Ming, el despiadado<br>
+    <input type="radio" name="eleccion" value="La princesa Aura">La princesa Aura<br>
+    <input type="radio" name="eleccion" value="Principe Vultan">Principe Vultan<br>
+    <input type="radio" name="eleccion" value="Dale Arden">Dale Arden<br><br>
+
+    <label for="">Selecciona tu personaje favorito:</label><br>
+    <select name="personaje">
+        <option value="Flash Gordon">Flash Gordon</option>
+        <option value="Ming, el despiadado">Ming, el despiadado</option>
+        <option value="La princesa Aura">La princesa Aura</option>
+        <option value="Principe Vultan">Principe Vultan</option>
+        <option value="Dale Arden">Dale Arden</option>
+    </select><br><br>
+
+    <label for="">¿Cuántos cómics de Flash Gordon lees a la semana?:</label><br>
+    <input type="range" name="comics-semana" min="0" max="10" value="5"><br><br>
+
+    <label for="color-mayas">¿Color ideal de las mayas de Flash Gordon?</label><br>
+    <input type="color" name="color-mayas" value="#ff0000"><br><br>
+
+    <label for="paginas-dia">¿Cuántas páginas de comics de Flash Gordon te lees cada día?</label><br>
+    <input type="number" name="paginas-dia" value="100" style="width: 60px;">
+
+    <p>Descuentos:</p>
+    <label for="familia-numerosa">
+        Familia Numerosa <input type="checkbox" name="descuentos" value="numerosa"><br>
+    </label>
+    <label for="pensionista">
+        Pensionista <input type="checkbox" name="descuentos" value="pensionista"><br>
+    </label>
+    <label for="necesidades-especiales">
+        Necesidades especiales <input type="checkbox" name="descuentos" value="especiales">
+    </label><br><br>
+
+    <label for="archivo">Elija el archivo</label>
+    <input type="file" name="archivo"><br><br>
+
+    <label for="slider-generico" style="margin-top: 30px; visibility: hidden; float:right;">Slider Genérico</label>
+    <input type="range" name="slider-generico" min="0" max="10" value="7">
+
+    <div style="margin-top: 20px;">
+        <button type="submit">Enviar los datos</button>
+        <button type="reset">Resetear</button>
+    </div>
+
+
+
+</body>
+
+</html>
