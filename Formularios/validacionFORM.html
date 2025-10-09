@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación formularios</title>
+</head>
+
+<body>
+
+    <h1>Validación formularios</h1>
+
+    <form>
+
+        <section>
+            <h2>1. Tres letras exactas</h2>
+            <label>Introduce 3 letras:
+                <input type="text" pattern="[A-Za-z]{3}$" title="Introduce exactamente 3 letras" required>
+            </label>
+            <button type="submit">Enviar los datos</button>
+        </section>
+    </form>
+
+    <form>
+        <section>
+            <h2>2. Contraseña 6 o más carácteres</h2>
+            <label for="">Introduce la contraseña
+                <input type="password" name="passwword" pattern="[.]{6,}$">
+                <!-- {6,} esto se refiere a 6 o más carácteres -->
+            </label>
+            <button type="submit">Enviar los datos</button>
+        </section>
+    </form>
+
+    <form>
+        <section>
+            <h2>3. Usuario de cadena de letras minúsculas, con un número opcionalmente de hasta dos dígitos al final. La
+                cadena completa tendrá entre 5 y 12 caracteres.</h2>
+            <label>Introduce usuario:
+                <input type="text" name="usuario" pattern="^[a-z]{3,10}[0-9]{2,9}$">
+            </label>
+            <button type="submit">Enviar los datos</button>
+        </section>
+    </form>
+
+    <form>
+        <section>
+            <h2>4. Contraseña la cual podrá contener letras mayúsculas, minúsculas, números y los caracteres ! ? -. Su
+                tamaño entre 8 y 12 caracteres.</h2>
+            <label for="">Introduce la contraseña
+                <input type="password" name="passwword" pattern="[a-zA-Z0-9!\?-]{8,12}$">
+            </label>
+            <button type="submit">Enviar los datos</button>
+        </section>
+    </form>
+
+    <form>
+        <section>
+            <h2>5. Usuario obligatorio de 5-40 caracteres y solo permite letras, mayúsculas o minúsculas, y números</h2>
+            <label>Introduce un usuario:
+                <input type="text" pattern="[A-Za-z0-9]{5,40}$" required>
+                <button type="submit">Enviar los datos</button>
+            </label>
+
+        </section>
+    </form>
+
+    <form>
+        <section>
+            <h2>6. Módelo coche validado: obligatorio solo opciones: A1, A3, A4 y A15</h2>
+            <label>Introduce un modelo de coche:
+                <input type="text" pattern="^[A1|A3|A4|A15]$" required>
+                <button type="submit">Enviar los datos</button>
+            </label>
+
+        </section>
+    </form>
+
+    <form>
+        <section>
+            <h2>7. Patente vehículo de 3 caracteres seguidos de 3 numeros</h2>
+            <label>Introduce patente de auto:
+                <input type="text" pattern="^[A-Z]{3}\d{3}$">
+                <button type="submit">Enviar los datos</button>
+            </label>
+
+        </section>
+    </form>
+
+
+    <form>
+        <section>
+            <h2>8. URL que debe de comenzar con http o https y después de las dos // debe haber un carácter.</h2>
+            <label>Introduce URL:
+                <input type="text" pattern="^(http|https)\/\/.+$">
+                <button type="submit">Enviar los datos</button>
+            </label>
+
+        </section>
+    </form>
+
+    <form>
+        <section>
+            <h2>9. Número entero positivo</h2>
+            <label>Introduce número:
+                <input type="text" pattern="[0-9]">
+                <button type="submit">Enviar los datos</button>
+            </label>
+
+        </section>
+    </form>
+
+    <form>
+        <section>
+            <h2>10. Dirección correo válida</h2>
+            <label>Introduce correo electrónico:
+                <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    title="Por favor, introduce una dirección de correo válida (ej: usuario@dominio.com)">
+                <button type="submit">Enviar los datos</button>
+            </label>
+
+        </section>
+    </form>
+
+    <form>
+        <section>
+            <h2>11. Código postal válido (5 dígitos)</h2>
+            <label>Introduce código postal:
+                <input type="number" pattern="[0-9]{5}$"
+                    title="Por favor, introduce un código postal válido de 5 digitos positivos">
+                <button type="submit">Enviar los datos</button>
+            </label>
+
+        </section>
+    </form>
+
+
+    <form>
+        <section>
+            <h2>12. Fecha en formato DD/MM/AAAA</h2>
+            <label>Introduce la fecha (DD/MM/AAAA):
+                <input type="text" pattern="^(0[1-9]|[12]\d|3[01])\/(0[1-9]|1[0-2])\/\d{4}$"
+                    title="Por favor, introduce una fecha válida en formato DD/MM/AAAA" required>
+                <button type="submit">Enviar los datos</button>
+            </label>
+
+        </section>
+    </form>
+
+    <form>
+        <section>
+            <h2>13. Número de teléfono válido (9 dígitos)</h2>
+            <label>Introduce tu número de teléfono:
+                <input type="tel" pattern="^\d{9}$"
+                    title="Por favor, introduce un número de teléfono válido de 9 dígitos" required>
+                <button type="submit">Enviar los datos</button>
+            </label>
+        </section>
+    </form>
+
+    <form>
+        <section>
+            <h2>14. Contraseña Segura</h2>
+            <label>Introduce la contraseña:
+                <input type="password" pattern="^(?=.*[A-Z])(?=.*\d).{8,}$"
+                    title="Debe tener al menos 8 caracteres, incluir una mayúscula y un número." required>
+                <button type="submit">Enviar los datos</button>
+            </label>
+        </section>
+    </form>
+
+    <form>
+        <section>
+            <h2>15. Número de Tarjeta de Crédito (Formato: XXXX-XXXX-XXXX-XXXX)</h2>
+            <label>Introduce el número de tarjeta:
+                <input type="text" pattern="^\d{4}-\d{4}-\d{4}-\d{4}$"
+                    title="Por favor, introduce 16 dígitos separados por guiones" required>
+                <button type="submit">Enviar los datos</button>
+            </label>
+        </section>
+    </form>
+
+    <form>
+        <section>
+            <h2>16. Código de País Válido (2 letras mayúsculas)</h2>
+            <label>Introduce el código de país (2 letras):
+                <input type="text" pattern="^[A-Z]{2}$"
+                    title="Por favor, introduce un código de país válido de 2 letras mayúsculas (ej. ES)" required>
+                <button type="submit">Enviar los datos</button>
+            </label>
+        </section>
+    </form>
+
+    <form>
+        <section>
+            <h2>17. Hora Válida (Formato HH:MM)</h2>
+            <label>Introduce la hora (HH:MM):
+                <input type="text" pattern="^([01]\d|2[0-3]):([0-5]\d)$"
+                    title="Por favor, introduce una hora válida en formato HH:MM (ej. 14:30 o 08:00)" required>
+                <button type="submit">Enviar los datos</button>
+            </label>
+        </section>
+    </form>
+
+    <form>
+        <section>
+            <h2>18. Código de Producto (Formato: XX-9999)</h2>
+            <label>Introduce el código de producto:
+                <input type="text" pattern="^[A-Za-z]{2}-\d{4}$"
+                    title="Por favor, introduce un código de producto válido: dos letras seguidas de un guion y cuatro dígitos (ej. AB-1234)"
+                    required>
+                <button type="submit">Enviar los datos</button>
+            </label>
+        </section>
+    </form>
+
+    <form>
+        <section>
+            <h2>19. Código de Descuento (6 caracteres alfanuméricos)</h2>
+            <label>Introduce el código de descuento:
+                <input type="text" pattern="^[A-Za-z0-9]{6}$"
+                    title="Por favor, introduce un código de 6 caracteres alfanuméricos (letras o números).">
+                <button type="submit">Enviar los datos</button>
+            </label>
+        </section>
+    </form>
+
+
+
+</body>
+
+</html>
