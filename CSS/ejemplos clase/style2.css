@@ -1,0 +1,19 @@
+body{
+    counter-reset: numero_tema;
+    counter-reset: letra_apartado;
+}
+
+h2::before{
+    counter-increment: numero_tema;
+    content: "Unidad " counter(numero_tema)": ";
+    color: blue;
+}
+
+h2{
+    color: blue;
+}
+
+h3::before{
+    counter-increment: letra_apartado;
+    content: counter(letra_apartado, lower-alpha)")";
+}

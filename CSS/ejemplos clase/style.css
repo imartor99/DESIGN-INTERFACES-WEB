@@ -1,0 +1,9 @@
+body{
+    counter-reset: numero_capitulo;  /*Crea una variable y se inicializa en 0*/
+}
+
+
+h2::before{
+    counter-increment: numero_capitulo; /*Incrementamos variable siempre que la inicialicemos*/
+    content: "Capitulo " counter(numero_capitulo) ": ";  /*Cadena más variable*/
+}

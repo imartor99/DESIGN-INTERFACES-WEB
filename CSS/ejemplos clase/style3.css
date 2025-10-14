@@ -1,0 +1,28 @@
+body{
+    counter-reset: numero_capitulo;
+}
+
+h2::before{
+    counter-increment: numero_capitulo;
+    content: "Capítulo " counter(numero_capitulo) ". ";
+    color: rgb(38, 38, 161);
+}
+
+h2{
+    counter-reset: num_apartado;
+    color: rgb(38, 38, 161);
+}
+
+h3::before{
+    counter-increment: num_apartado;
+    content: counters(numero_capitulo,". ") "." counter(num_apartado) " -- ";
+}
+
+h3{
+    counter-reset: num_subapartado;
+}
+
+h4::before{
+    counter-increment: num_subapartado;
+    content: counters(numero_capitulo,".") "." counters(num_apartado,".") "." counter(num_subapartado) " -- ";
+}
