@@ -1,0 +1,116 @@
+/* ESTILOS BASE Y HEADER */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; 
+}
+
+header {
+    background-color: #363636;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin: 0;
+}
+
+header h1 {
+    font-size: 32px;
+    margin: 0;
+    font-weight: normal;
+}
+
+/* NAV */
+nav {
+    padding: 10px 0;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    margin: 0 auto;
+}
+
+nav li {
+    margin-right: 25px;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px 0;
+    display: block;
+}
+
+nav a:hover {
+    color: red; /* REQUISITO 1: :hover */
+}
+
+/* MAIN Y ARTÍCULOS */
+main {
+    padding: 20px 40px 20px 0;
+    margin: 0;
+}
+
+section {
+    margin-bottom: 25px;
+}
+
+/* "Título del artículo:" */
+section::before {
+    content: "Título del artículo:";
+    display: block; 
+    font: bold 1.2em Arial, sans-serif; 
+    color: black;
+    margin: 0 0 5px 0;
+}
+
+/* Títulos "Artículo 1", "Artículo 2" */
+section h2 {
+    color: black;
+    font-size: 2em;
+    margin: 5px 0;
+    padding-top: 0;
+}
+
+/* Primera letra en azul */
+section h2::first-letter {
+    color: blue;
+}
+
+/* Párrafo de contenido */
+section p {
+    margin: 10px 0; 
+}
+
+section p::first-line {
+    color: green; /* Solo primera línea en verde */
+}
+
+/* REQUISITO 2: Emojis principio y final del p */
+section p::before {
+    content: "*. 👌";
+    color: green;
+}
+
+section p::after {
+    content: " - Aloja more don 👌";
+    color: red;
+    display: inline;
+}
+
+/* "- Fin del artículo" */
+section::after {
+    content: "- Fin del artículo";
+    display: block;
+    font-size: 1em;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 0; 
+}
+
+/* REQUISITO 3: ::selection */
+section p::selection {
+    background-color: yellow;
+    color: black;
+}
