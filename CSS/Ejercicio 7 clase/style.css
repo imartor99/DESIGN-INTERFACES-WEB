@@ -1,0 +1,88 @@
+div {
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    border: dashed red 5px;
+    margin-bottom: 20px;
+}
+
+.content1 {
+    background-color: black;
+}
+
+.content2 {
+    background-image: linear-gradient(to bottom, #e4d7c0, #a37534);
+}
+
+.content3 {
+    display: flex;
+    flex-direction: column;
+    background-clip: border-box;
+    align-items: center;
+}
+
+.imagen-mitad {
+    height: 150px;
+    width: 100%;
+}
+
+.content4 {
+    background-image: url(puesta-sol.jpg);
+    background-size: 100px 60px; 
+    background-repeat: no-repeat;
+    /* Posicionamiento: Esquina Superior Izquierda (0 0) */
+    background-position: 0 0;
+    /* Le dice al navegador que el punto de origen (0 0) para background-position 
+       debe comenzar desde el borde interior del relleno (padding) o el contenido (content-box). */
+    background-origin: content-box;
+}
+
+.content5{
+    background-color: rgb(179, 179, 252);
+    background-image: url(puesta-sol.jpg);
+    background-size: 100px 60px; 
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-origin: content-box;
+}
+
+.content6{
+    background-image: url(puesta-sol.jpg);
+    background-size: 250px 250px;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-origin: content-box;
+}
+
+.content7{
+    background-color: rgb(179, 179, 252);
+    background-image: url(puesta-sol.jpg);
+    background-size: 260px 260px;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.content8{
+    width: 100%;
+    background-image: url(puesta-sol.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-clip: border-box;
+}
+
+.content9 {
+    width: 75%;
+    background-image: url(favicon.png),url(puesta-sol.jpg);
+    background-repeat: repeat-x, no-repeat;
+    background-position: left top, center;
+    background-size: 60px auto, cover;
+}
+
+.content10 {
+    width: 1000px;
+    height: 700px;
+    background-image: url(arbol.png), url(aves.png), url(cielo.png);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: bottom, bottom, top;   
+}

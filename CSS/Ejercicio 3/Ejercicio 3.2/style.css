@@ -1,0 +1,30 @@
+.contenido-punto {
+    margin-bottom: 20px;
+}
+
+.punto-header {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: black; 
+}
+
+/* REQUISITO: Color del enlace al ser visitado (:visited) */
+
+.menu-ejercicio2 a:visited {
+    color: rgb(36, 161, 5); /* Cambia a morado al ser visitado */
+}
+
+/* REQUISITO: Efectos al pulsar Punto 1 o Punto 2 (:target) */
+ 
+/* Aplica el estilo al texto cuando #punto1 O #punto2 son el target */
+#punto1:target .punto-header,
+#punto2:target .punto-header {
+    color: green; /* Texto cambia de color a verde */
+}
+
+/* Aplica el pseudoelemento ::before para añadir triángulo*/
+#punto1:target .punto-header::before,
+#punto2:target .punto-header::before {
+    content: '> '; 
+    color: green;
+}

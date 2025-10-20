@@ -1,0 +1,44 @@
+/* Inicializa el contador principal (para los Capítulos) */
+main {
+    counter-reset: capitulo;
+}
+
+/* NIVEL 1: Títulos H2 (Capítulo X: Título) */
+
+/* Incrementa 'capitulo' y REINICIA el contador de subsección */
+h2 {
+    counter-increment: capitulo;
+    counter-reset: subseccion;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Añadir el pseudoelemento ::before (Capítulo X:) */
+h2::before {
+    content: "Capítulo " counter(capitulo) ": ";
+    /* La numeración es azul y negrita */
+    color: blue;
+    font-weight: bold;
+}
+
+
+/* NIVEL 2: Títulos H3 (Título - Subsección X.Y) */
+
+
+/* Incrementa el contador secundario 'subseccion' */
+h3 {
+    counter-increment: subseccion;
+    font-size: 1.2em;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Añadir el pseudoelemento ::after ( - Subsección X.Y) */
+h3::after {
+    content: " - Subsección " counter(capitulo) "." counter(subseccion);
+    font-style: italic;
+    color: green;
+    font-weight: bold;
+}

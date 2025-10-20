@@ -1,0 +1,53 @@
+.ejercicio1-form {
+    max-width: 400px;
+}
+
+.ejercicio1-form div {
+    margin-bottom: 10px;
+}
+
+/* 1. ESTADO NORMAL */
+
+/* El campo nombre es verde porque está activado  */
+.nombre-input {
+    background-color: lightgreen;
+    border: 1px solid darkgreen;
+    height: 25px;
+    width: 150px;
+}
+
+/* El campo edad está rojo porque está desactivado en su estado normal (:disabled) */
+input:disabled {
+    background-color: lightcoral;
+    border: 1px solid darkred;
+    height: 25px;
+    width: 150px;
+}
+
+/* 2. EFECTO AL PASAR EL RATÓN (:hover) */
+
+/* El campo nombre cambia de color y cursor al pasar el ratón */
+.nombre-input:hover {
+    background-color: #dfecd0; 
+    cursor: pointer; 
+}
+
+/* 3. EFECTO AL RECIBIR EL FOCO (:focus) */
+
+/* El campo nombre cambia de color cuando recibe el foco */
+.nombre-input:focus {
+    background-color: rgb(74, 190, 243); /* Color foco */
+}
+
+/* 4. y 5. EFECTO AL PULSAR (:active) */
+
+/* Los elementos Hombre y Mujer cambian su estilo a cursiva cuando se pulsan sobre la etiqueta */
+.radio-group label:active {
+    font-style: italic; 
+}
+
+/* El último elemento (checkbox) cambia su fondo a amarillo cuando se pulsa sobre la etiqueta */
+.condiciones-label:active {
+    background-color: yellow; /* Cambia el fondo a amarillo al pulsar (estado activo) */
+}
+

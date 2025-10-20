@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="main-content">
+        <form>
+
+            <header>
+                <h1 class="titulo-completo">HOJA DE INSCRIPCIÓN <br> EN LOS CICLOS FORMATIVOS DE GRADO SUPERIOR</h1>
+            </header>
+
+            <fieldset>
+                <legend>Datos Personales</legend>
+
+                <div class="field-row-3col">
+                    <div>
+                        <label for="nombre">Nombre (*):</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div>
+                        <label for="apellidos">Apellidos (*):</label>
+                        <input type="text" id="apellidos" name="apellidos" required>
+                    </div>
+                    <div>
+                        <label for="dni">DNI (*):</label>
+                        <input type="text" id="dni" name="dni" required pattern="[0-9]{8}[A-Za-z]{1}"
+                            title="8 dígitos seguidos de 1 letra (ej: 12345678A)">
+                    </div>
+                </div>
+
+                <div class="field-row-3col">
+                    <div>
+                        <label for="localidadNac">Localidad de Nacimiento:</label>
+                        <input type="text" id="localidadNac" name="localidadNac">
+                    </div>
+                    <div>
+                        <label for="provincia">Provincia (*):</label>
+                        <select id="provincia" name="provincia" required>
+                            <optgroup label="Andalucía">
+                                <option value="almeria">Almería</option>
+                                <option value="cadiz">Cádiz</option>
+                                <option value="cordoba">Córdoba</option>
+                                <option value="granada">Granada</option>
+                                <option value="huelva">Huelva</option>
+                                <option value="jaen">Jaén</option>
+                                <option value="malaga">Málaga</option>
+                                <option value="sevilla">Sevilla</option>
+                            </optgroup>
+                            <optgroup label="Castilla y León">
+                                <option value="avila">Ávila</option>
+                                <option value="burgos">Burgos</option>
+                                <option value="leon">León</option>
+                                <option value="palencia">Palencia</option>
+                                <option value="salamanca">Salamanca</option>
+                                <option value="segovia">Segovia</option>
+                                <option value="soria">Soria</option>
+                                <option value="valladolid">Valladolid</option>
+                                <option value="zamora">Zamora</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="fechaNac">Fecha de Nacimiento (*):</label>
+                        <input type="date" id="fechaNac" name="fechaNac" required>
+                    </div>
+                </div>
+
+                <label for="direccion">Dirección (*):</label>
+                <input type="text" id="direccion" name="direccion" required>
+
+                <div class="inline-fields">
+                    <div>
+                        <label for="codPostal">Código Postal (*):</label>
+                        <input type="text" id="codPostal" name="codPostal" required pattern="[0-9]{5}"
+                            title="Debe contener solo 5 dígitos." maxlength="5">
+                    </div>
+                    <div>
+                        <label for="telefono">Teléfono (*):</label>
+                        <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{9}"
+                            title="Debe contener 9 dígitos." maxlength="9">
+                    </div>
+                </div>
+
+                <label for="email">Email (*):</label>
+                <input type="email" id="email" name="email" required 
+                    pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                    title="Debe ser un correo válido (ej: usuario@dominio.com)"    
+                    placeholder="usuario@gmail.com">
+
+                <label for="password">Contraseña (*):</label>
+                <input type="password" id="password" name="password" required
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
+                    title="Mínimo 8 caracteres, al menos una mayúscula y un número.">
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Forma de Acceso</legend>
+                <div class="radio-group">
+                    <input type="radio" id="accesoDirecto" name="formaAcceso" value="Directo" checked>
+                    <label for="accesoDirecto">Directo</label>
+                </div>
+
+                <div class="radio-group subopcion-directo">
+                    <input type="radio" id="accesoBach" name="formaAcceso" value="Bachillerato Log">
+                    <label for="accesoBach">Bachillerato Log Modalidad</label>
+                    <input type="text" id="modalidadBach" name="modalidadBach">
+                </div>
+
+                <div class="radio-group subopcion-directo">
+                    <input type="radio" id="accesoExp" name="formaAcceso" value="Experimental">
+                    <label for="accesoExp">Experimental</label>
+                </div>
+
+                <div class="radio-group subopcion-directo">
+                    <input type="radio" id="accesoCOU" name="formaAcceso" value="COU">
+                    <label for="accesoCOU">COU Opción</label>
+                    <input type="text" id="opcionCOU" name="opcionCOU">
+                </div>
+
+                <div class="radio-group subopcion-directo">
+                    <input type="radio" id="accesoFP2" name="formaAcceso" value="FP2">
+                    <label for="accesoFP2">FP2</label>
+                </div>
+
+                <div class="radio-group subopcion-directo">
+                    <input type="radio" id="accesoOtros" name="formaAcceso" value="Otros">
+                    <label for="accesoOtros">Otros (especifique):</label>
+                    <input type="text" id="otrosAcceso" name="otrosAcceso">
+                </div>
+
+                <div class="radio-group">
+                    <input type="radio" id="accesoPrueba" name="formaAcceso" value="Prueba Libre">
+                    <label for="accesoPrueba">Prueba Libre</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Documentos Adjuntados</legend>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="fotocopiaDni" name="documentos" value="DNI">
+                    <label for="fotocopiaDni">Fotocopia DNI</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="certAcad" name="documentos" value="Certificado Académico">
+                    <label for="certAcad">Certificado Académico</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="otrosDoc" name="documentos" value="Otros">
+                    <label for="otrosDoc">Otros documentos (especifique):</label>
+                    <input type="text" id="otrosEspecificar" name="otrosEspecificar">
+                </div>
+
+                <div>
+                    <label for="adjuntarArchivos">Adjuntar documentos (puedes subir más de un documento):</label>
+                    <input type="file" id="adjuntarArchivos" name="adjuntarArchivos" multiple>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Personaliza</legend>
+                <label for="codigoPersonalizado">Código Personalizado:</label>
+                <input type="text" id="codigoPersonalizado" name="codigoPersonalizado" required
+                    pattern="[A-Za-z]{3}-[0-9]{4}" title="Formato: Tres letras - Cuatro dígitos (ej: XYZ-1234)."
+                    maxlength="8">
+
+                <label for="grupoCurso">Grupo del curso:</label>
+                <input type="text" id="grupoCurso" name="grupoCurso" required pattern="^(A|B|AA|BB|ABA)$"
+                    title="Debe ser A, B, AA, BB o ABA.">
+
+                <label for="idiomaCertificado">Idioma Certificado:</label>
+                <select id="idiomaCertificado" name="idiomaCertificado">
+                    <option value="ingles" selected>Inglés</option>
+                    <option value="frances">Francés</option>
+                    <option value="aleman">Alemán</option>
+                    <option value="portugues">Portugués</option>
+                    <option value="italiano">Italiano</option>
+                    <option value="japones">Japonés</option>
+                </select>
+
+                <label for="certificacionIdiomas">Certificación en idiomas:</label>
+                <input type="text" id="certificacionIdiomas" name="certificacionIdiomas" required
+                    pattern="^(A[1-2]|B[1-2]|C[1-2])$" title="Solo niveles A1, A2, B1, B2, C1, C2.">
+            </fieldset>
+
+            <fieldset>
+                <legend>Otros datos</legend>
+                <label for="comentario">Indique cualquier otra cosa a tener en cuenta:</label>
+                <textarea id="comentario" name="comentario" placeholder="Déjanos tu comentario" rows="4"></textarea>
+            </fieldset>
+
+            <div class="botones">
+                <button type="submit" class="boton-enviar">Enviar Solicitud</button>
+                <button type="reset" class="boton-resetear">Resetear</button>
+            </div>
+
+        </form>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+/* Estilos Globales */
+
+body {
+    /* Mantenemos el peso de fuente por defecto. Se podría añadir font-family: serif; */
+    font-size: 1.1em; 
+
+}
+
+/* Título Principal (H1) */
+
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 25px; 
+    position: relative;
+    padding-bottom: 10px;
+    color: #005A9C;
+}
+
+/* Barra azul única bajo el H1 */
+
+h1::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #005A9C;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Inicializa el contador principal 'capitulo' */
+.indice {
+    /* Inicia en 2 para que el primer h2 sea 3 (2 + 1) */
+    counter-reset: capitulo 2; 
+    padding: 20px;
+    padding-top: 10px;
+}
+
+/* NIVEL 1: Capítulos (H2) */
+
+h2 {
+    counter-increment: capitulo;
+    counter-reset: seccion; 
+    font-size: 1.5em; 
+    font-weight: bold; 
+    margin-top: 25px;
+    margin-bottom: 15px;
+    color: #1a4fff; 
+    line-height: 1.2;
+    padding-bottom: 0; 
+}
+
+/* Numeración de Capítulos */
+h2::before {
+    /* Muestra "Capítulo X — " */
+    content: "Capítulo " counter(capitulo) " — ";
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #005A9C;
+}
+
+
+/* NIVEL 2: Secciones (H3) */
+
+h3 {
+    counter-increment: seccion;
+    font-size: 1.2em;
+    font-weight: bold; 
+    margin-left: 0; 
+    margin-bottom: 5px;
+    color: rgb(51, 50, 50);
+}
+
+/* Numeración de Secciones */
+h3::before {
+    /* Muestra "X.a → " (Números y letras minúsculas) */
+    content: counter(capitulo) "." counter(seccion, lower-alpha) " → ";
+    font-size: 1.05;
+    font-weight: bold; 
+    color: #666;
+    margin-right: 5px;
+}
+
+
+/* NIVEL 3: Subapartados (H4) */
+/* Alternancia de símbolos */
+
+h4 {
+    font-size: 1em;
+    font-weight: bold;
+    margin-left: 20px; 
+    margin-bottom: 5px;
+    color: #353535;
+}
+
+/* 1. SÍMBOLO ★: Aplica a todos los H4 en posición IMPAR (1, 3, 5, 7, ...) */
+h4:nth-of-type(odd)::before {
+    content: '★ '; 
+    font-weight: normal;
+    color: #666; 
+    margin-right: 5px;
+}
+
+/* 2. SÍMBOLO ☆: Aplica a todos los H4 en posición PAR (2, 4, 6, 8, ...) */
+h4:nth-of-type(even)::before {
+    content: '☆ '; 
+    font-weight: normal;
+    color: #666; 
+    margin-right: 5px;
+}

@@ -1,0 +1,34 @@
+/* Inicializa el contador principal 'parte' */
+main {
+    counter-reset: parte;
+}
+
+/* NIVEL 1: Títulos H2 (Parte 1, Parte 2...) */
+
+/* Incrementa 'parte' y REINICIA 'seccion' */
+h2 {
+    counter-increment: parte;
+    counter-reset: seccion; 
+    font-size: 1.5em; 
+}
+
+/* Añade "Parte X - " en negrita */
+h2::before {
+    content: "Parte " counter(parte) " - ";
+    font-weight: bold;
+}
+
+/* NIVEL 2: Títulos H3 (1.1) 2014, etc. */
+
+/* Incrementa el contador secundario 'seccion' */
+h3 {
+    counter-increment: seccion;
+    font-weight: bold; 
+    margin-bottom: 5px; 
+}
+
+/* Añade la numeración anidada: "X.Y)" */
+h3::before {
+    content: counter(parte) "." counter(seccion) ") ";
+    font-weight: bold; 
+}
