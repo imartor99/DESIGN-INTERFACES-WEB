@@ -7,14 +7,33 @@
     <title>Ejercicio 1</title>
 
     <style>
-        thead:first-child{
-            background-color: red;
+        /* Estilos para el encabezado (thead) - Mantiene el rojo y blanco */
+        thead:first-child {
+            background-color: rgb(138, 1, 1);
             color: white;
         }
 
-        tfoot:last-child{
-            background-color:  red;
+        /* Estilos para el pie de tabla (tfoot) - Mantiene el rojo y blanco */
+        tfoot:last-child {
+            background-color: rgb(138, 1, 1);
             color: white;
+        }
+
+        /* Filas 2, 4, 6 (Pares) del cuerpo: Fondo azul con letra blanca */
+        tbody tr:nth-child(even) {
+            /* even selecciona las filas pares */
+            color: darkblue;
+        }
+
+        /* Filas 3, 5, 7 (Impares) del cuerpo: Fondo blanco con letra azul */
+        tbody tr:nth-child(odd) {
+            /* odd selecciona las filas impares */
+            background-color: blue;
+            color: white;
+        }
+
+        th {
+            font-weight: bold;
         }
     </style>
 </head>
@@ -43,7 +62,7 @@
                 <td>1500</td>
                 <td>1750</td>
                 <th>3250</th>
-                
+
             </tr>
             <tr>
                 <td>Deporte</td>
