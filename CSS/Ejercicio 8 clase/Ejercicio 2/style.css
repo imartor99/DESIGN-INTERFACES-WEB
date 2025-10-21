@@ -1,0 +1,77 @@
+div{
+    height: 300px;
+    width: 600px;
+    margin: auto;
+    border: solid black 5px;
+    margin-bottom: 20px;
+    font-size: 50px;
+    line-height: 200px;
+    text-align: center;
+}
+
+.content1{
+    color: blue;
+    text-shadow: 4px 4px 8px black;
+}
+
+.content2{
+    background-color: rgb(5, 188, 249);
+    color: white;
+    text-shadow: 6px 6px 7px black;
+}
+
+.content3{
+    background-color: rgb(200, 200, 200);
+    color: rgb(200, 200, 200);
+    text-shadow: 
+    -3px -1px 1px white,
+    3px 1px 1px rgb(164, 164, 164);
+}
+
+.content4{
+    background-color: rgb(200, 200, 200);
+    color: rgb(200, 200, 200);
+    text-shadow: 
+    3px 1px 1px white,
+    -1px -1px 1px rgb(164, 164, 164);
+}
+
+.content5{
+    text-shadow: 
+    0px 0px 20px rgb(2, 0, 130),
+    0px 0px 20px rgb(2, 0, 130);
+
+}
+
+.content6{
+    color: rgb(152, 152, 152);
+    text-shadow: 
+    2px 2px 0 #008080,
+    4px 4px 0 #008080;
+}
+
+.content7 {
+    color: #8B8888; /* Gris oscuro, como el metal caliente */
+    text-shadow: 
+    0px -1px 3px rgb(247, 247, 151),
+    0px -3px 5px rgb(244, 177, 53),
+    0px -5px 10px rgb(255, 94, 0),
+    0px -10px 20px rgb(139, 0, 0);  
+}
+
+.content8 {
+    color : rgb(160, 160, 253);
+    background-color: rgb(160, 160, 253);
+    text-shadow: 
+    1px 1px 0px black,
+    -1px 1px 0px black,
+    1px -1px 0px black,
+    -1px -1px 0px black;
+
+}
+
+.content9 {
+     text-shadow: 
+    0px 0px 15px rgb(255, 145, 0),
+    0px 0px 20px rgba(255, 145, 0, 0.378);
+}
