@@ -1,0 +1,165 @@
+.titulo {
+  background: linear-gradient(rgb(76, 4, 132), rgb(247, 113, 135));
+  background-clip: text;
+  color: transparent;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+div {
+  width: 80%;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.content1 {
+  background: linear-gradient(
+    to right,
+    black 0%,
+    blue 30%,
+    yellow 50%,
+    green 75%,
+    red 100%
+  );
+}
+
+.content2 {
+  background: repeating-linear-gradient(
+    to bottom,
+    blue,
+    blue 20px,
+    red 20px,
+    red 40px,
+    yellow 40px,
+    yellow 60px
+  );
+}
+
+.content3 {
+  background: radial-gradient(
+    ellipse at center,
+    yellow 0%,
+    orange 20%,
+    red 50%,
+    black 100%
+  );
+}
+
+.content4 {
+  background: radial-gradient(
+    ellipse,
+    yellow 0%,
+    yellow 40%,
+    red 45%,
+    black 100% 
+  );
+}
+
+.content5 {
+  background: radial-gradient(
+    circle,
+    yellow 0%,
+    yellow 60%,
+    red 65%,
+    black 100% 
+  );
+}
+
+.content6 {
+  background: radial-gradient(
+    circle at left,
+    yellow 0%,
+    yellow 55%,
+    red 65%,
+    black 100% 
+  );
+}
+
+.content7 {
+  background: radial-gradient(
+    circle at center,
+
+    /* Forma elíptica, centrada */ /* Colores desde el centro hacia afuera */
+     blue 20%,
+    indigo 40%,
+    red 60%,
+    orange 80%,
+    yellow 120%
+  );
+}
+
+.content8 {
+  background: radial-gradient(
+    ellipse at center,
+
+    /* Forma elíptica, centrada */ /* Colores desde el centro hacia afuera */
+    blue 0%,
+    indigo 20%,
+    red 40%,
+    orange 60%,
+    yellow 100%
+  );
+}
+
+.content9 {
+  background: radial-gradient(
+    circle at center,
+
+    /* Un círculo grande, centrado */ /* Colores desde el centro hacia afuera */
+    blue 5%,
+    red 59%,
+    orange 100% 
+  );
+}
+
+.content10 {
+  background: repeating-radial-gradient(
+    circle at center,
+    #f84646 0 55px,
+    red 55px 110px,
+    #7a0000 110px 165px
+  );
+}
+
+.content11 {
+  background: radial-gradient(
+    circle at top left,
+    #000033 0%,
+    #0000ff 60%,
+    #000080 110% 
+  );
+}
+
+.content12 {
+  background: conic-gradient(
+    yellow 0deg,
+
+    rgb(255, 17, 0) 40deg,
+
+    blue 40deg,
+    blue 10deg,
+
+    yellow 70deg,
+
+    rgb(255, 17, 0) 100deg,
+
+    blue 100deg,
+    blue 10deg,
+    yellow 140deg,
+    yellow 10deg,
+
+    rgb(255, 17, 0) 180deg,
+    blue 180deg,
+
+    yellow 220deg,
+    rgb(255, 17, 0) 250deg,
+    rgb(255, 17, 0) 10deg,
+    blue 250deg,
+    yellow 280deg,
+
+    rgb(255, 17, 0) 320deg,
+    blue 320deg,
+
+    yellow 360deg
+  );
+}
