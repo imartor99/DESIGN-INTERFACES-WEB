@@ -1,0 +1,14 @@
+nav {
+    background-color: black;
+    padding: 8px;
+}
+
+p {
+    color: white;
+    display: inline;
+    margin-left: 10px;
+}
+
+p:hover{
+    text-decoration: underline;
+}
