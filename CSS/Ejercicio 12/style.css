@@ -1,0 +1,230 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding-top: 50px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* NAVEGACIÓN FIJA */
+.encabezado {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f5f5dc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    height: 50px;
+}
+
+.barra-navegacion {
+    height: 100%;
+}
+
+.navegacion {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.navegacion > li {
+    float: left;
+    position: relative;
+    height: 100%;
+    /* Se mantienen display: flex y align-items: center para centrado vertical */
+    display: flex;
+    align-items: center;
+}
+
+/* Ítems principales (Iliberis, ASIR, DAW) */
+.navegacion > li > a {
+    padding: 15px 20px;
+    font-weight: bold;
+    color: #333;
+    line-height: 20px;
+}
+
+/* Logo Iliberis (Izquierda) */
+.elemento-logo {
+    margin-left: 250px;
+}
+
+.elemento-logo a {
+    color: white;
+    padding: 15px 20px;
+    margin-right: 10px;
+    background-color: #e55353;
+}
+
+/* Hover Iliberis, ASIR y DAW y el estado "activo" del submenú anidado */
+.elemento-logo a:hover,
+.desplegable > a:hover,
+.desplegable-anidado:hover > a {
+    background-color: #8A2BE2 !important; /* !important solo para la regla del anidado */
+    color: white !important;
+}
+
+/* Logo Ana DIW (Derecha) - Reglas consolidadas */
+.navegacion > li.logo-derecha {
+    float: right;
+    margin-right: 20px;
+}
+
+.logo-derecha a {
+    color: green;
+    border: 2px solid green;
+    padding: 10px 15px;
+    height: 100%;
+    margin-right: 250px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* SUBMENÚ NIVEL 1 y 2 (Ocultar y Posicionar) */
+.submenu, .submenu-anidado {
+    display: none;
+    position: absolute;
+    min-width: 150px;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+.desplegable:hover > .submenu {
+    display: block;
+}
+
+/* Estilo Base Ítems Submenú (Nivel 1 y 2) */
+.elemento-submenu {
+    position: relative;
+}
+
+.elemento-submenu a,
+.submenu-anidado a,
+.submenu-grande a { 
+    padding: 10px 15px;
+    color: #000;
+    font-weight: bold;
+    background-color: #00FF7F; 
+}
+
+/* Hover Ítems Submenú (Nivel 1 y 2) */
+.elemento-submenu:hover > a,
+.submenu-anidado a:hover {
+    background-color: #8A2BE2;
+    color: white;
+}
+
+
+/* SUBMENÚ ANIDADO (Nivel 2) */
+.submenu-anidado > li {
+    position: relative;
+}
+
+.elemento-submenu.desplegable-anidado {
+    position: relative;
+}
+
+.desplegable-anidado:hover > .submenu-anidado {
+    display: block;
+    top: 0;
+    left: 100%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    z-index: 20;
+}
+
+/* Clases de color específicas (!important para anular el estilo base) */
+.color-iso a,
+.color-redes a,
+.color-diseño a,
+.color-despliegue a {
+    background-color: #00FF7F !important;
+    color: #000 !important;
+    font-weight: bold !important;
+}
+
+/* Hover de clases de color */
+.color-iso a:hover,
+.color-redes a:hover,
+.color-diseño a:hover,
+.color-despliegue a:hover {
+    background-color: #8A2BE2 !important;
+    color: white !important;
+}
+
+/* Submenú DAW (Ancho grande) - */
+.submenu-grande a {
+    min-width: 250px;
+}
+
+
+/* BANNER */
+.banner {
+    width: 100%;
+    height: 600px;
+    margin-top: 50px;
+    background-image: url('descarga.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.contenido-banner {
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+.contenido-banner h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contenido-banner p {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 0 0 30px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contenido-banner button {
+    background-color: #ff7f50;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contenido-banner button:hover {
+    background-color: #ff6347;
+}
