@@ -1,0 +1,50 @@
+section {
+    width: auto;
+    height: 700px;
+    border: 2px solid black;
+    padding: 5px;
+    display: flex;
+    /*flex-direction: row;*/
+    /*flex-wrap: wrap; Envuelve a sus hijos para q no desborden*/
+    flex-flow: row wrap;/*Engloba flex-direction y flex-wrap*/
+    /*justify-content: flex-end;*/
+    /*align-items: flex-start;/*flex start alinea con respecto a la caja y con baseline
+                              con respecto al contenido. Coloca verticalmente por fila*/
+    /*align-content: center;/*Coloco verticalmente todo el contenido*/
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.cajas{
+    border: 4px solid black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    padding: 20px;
+    margin: 10px;
+}
+
+.red{
+    background-color: red;
+    /*flex-grow: 3;*/
+    align-self: center;/*Posiciona solo ese elemento*/
+}
+
+.blue {
+    background-color: blue;
+    /*height: 150px;
+    line-height: 150px;*/
+    /*flex-grow: 2;/*Del espacio que sobra, le da dos partes*/
+}
+
+.yellow {
+    background-color: yellow;
+    /*flex-basis: 200px; /*Crece en relación al flex direction*/
+}
+
+.green {
+    background-color: green;
+    /*flex-grow: 1;*/
+    /*order: -1; altera orden de los hijos*/
+    align-self: flex-end;
+}
