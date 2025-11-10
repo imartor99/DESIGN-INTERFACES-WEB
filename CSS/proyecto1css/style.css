@@ -17,6 +17,17 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "icon";
+  src: url(/CSS/proyecto1css/fonts/websymbols-regular-webfont.eot) format("embedded-opentype"),
+    url(/CSS/proyecto1css/fonts/websymbols-regular-webfont.svg) format("svg"),
+    url(/CSS/proyecto1css/fonts/websymbols-regular-webfont.ttf) format("truetype"),
+    url(/CSS/proyecto1css/fonts/websymbols-regular-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 /* ESTILOS GENERALES */
 
 * {
@@ -269,6 +280,10 @@ a:hover {
   color: blue !important;
 }
 
+.orange{
+  color: orange !important;
+}
+
 #aside li {
   list-style: square;
   margin-top: 8 px;
@@ -304,4 +319,53 @@ a:hover {
   border: 1px solid #ccc;
   box-shadow: 0px 0px 4px #c9c9c9;
   font-size: 16px;
+  position: relative;
+}
+
+#sections .article {
+  margin: 20px 10px;
+}
+
+#sections .date{
+  color: gray;
+  font-size: 14px;
+}
+
+#sections .stickerOne,
+#sections .stickerTwo {
+  position: absolute;
+  margin-top: -38px;
+}
+#sections .stickerTwo{
+  left: 880px;
+}
+
+.icon {
+  font-family: "icon";
+  margin-right: 5px;
+  color: black;
+}
+
+.clearfix{
+  float: none;
+  clear: both;
+}
+
+#history {
+  float: right;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+#footer {
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: sans-serif;
+  font-size: 14px;
+  box-shadow: 0px 0px 2px gray;
 }
