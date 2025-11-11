@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Proyecto 2 CSS FLEXBOX</title>
+  </head>
+  <body>
+    <header>
+      <section class="container">
+        <article>
+          <h1>Maquetando en CSS con Flexbox</h1>
+          <h2>Selectores, Pseudoclases, Pseudoelementos, Flexbox y más ...</h2>
+        </article>
+
+        <figure>
+          <img src="assets/dev.svg" alt="inicio" />
+        </figure>
+      </section>
+    </header>
+
+    <!--CUERPO-->
+
+    <main>
+      <!--SECCION ABOUT-->
+      <section class="about container">
+        <article>
+          <h2 class="title">¿Quienes somos?</h2>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+            labore asperiores ratione beatae nulla voluptatum iusto ipsum
+            voluptatibus laborum corrupti tenetur, ducimus laudantium obcaecati
+            suscipit veritatis eaque delectus maxime similique!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+            illum magni soluta tenetur eos ex delectus alias eius, nemo
+            accusantium laboriosam ab tempore vero, corrupti minus reiciendis
+            nisi autem itaque?
+          </p>
+
+          <a href="#">Unete al curso</a>
+        </article>
+
+        <figure>
+          <img src="assets/people.svg" alt="people" />
+        </figure>
+      </section>
+
+      <!--SECCION PORTAFOLIO-->
+
+      <section class="portfolio">
+        <div class="portfolio__container container">
+          <h2 class="title">Nuestros planes de trabajo</h2>
+          <div class="portfolio__cards">
+            <article class="portfolio__card">
+              <img src="assets/card1.jpg" alt="card1" />
+
+              <div class="portfolio__texts">
+                <h3>Únete a nuestro plan</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Laboriosam repellat assumenda voluptatum odit, aperiam harum,
+                  molestiae porro error iusto nobis similique earum ratione
+                  aspernatur labore itaque accusantium eveniet excepturi
+                  corporis.
+                </p>
+                <a href="#">Entra ahora</a>
+              </div>
+            </article>
+
+            <article class="portfolio__card">
+              <img src="assets/card2.jpg" alt="card1" />
+
+              <div class="portfolio__texts">
+                <h3>Únete a nuestro plan</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Laboriosam repellat assumenda voluptatum odit, aperiam harum,
+                  molestiae porro error iusto nobis similique earum ratione
+                  aspernatur labore itaque accusantium eveniet excepturi
+                  corporis.
+                </p>
+                <a href="#">Entra ahora</a>
+              </div>
+            </article>
+
+            <article class="portfolio__card">
+              <img src="assets/card3.jpg" alt="card1" />
+
+              <div class="portfolio__texts">
+                <h3>Únete a nuestro plan</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Laboriosam repellat assumenda voluptatum odit, aperiam harum,
+                  molestiae porro error iusto nobis similique earum ratione
+                  aspernatur labore itaque accusantium eveniet excepturi
+                  corporis.
+                </p>
+                <a href="#">Entra ahora</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!--Seccion CENTRAL-->
+
+      <section class="central">
+        <article class="container">
+          <h2 class="title">Hacemos sueños en hechos.</h2>
+        </article>
+      </section>
+
+      <!--Seccion GALERIA-->
+      <section class="gallery container">
+        <h2 class="title">Nuestro trabajo</h2>
+
+        <article class="gallery__container">
+          <img src="assets/img1.jpg" alt="foto1" class="gallery__picture" />
+          <img src="assets/img2.jpg" alt="foto2" class="gallery__picture" />
+          <img src="assets/img3.jpg" alt="foto3" class="gallery__picture" />
+          <img src="assets/img4.jpg" alt="foto4" class="gallery__picture" />
+          <img src="assets/img5.jpg" alt="foto5" class="gallery__picture" />
+          <img src="assets/img6.jpg" alt="foto6" class="gallery__picture" />
+        </article>
+      </section>
+
+      <!-- Seccion LENGUAJES -->
+
+      <section class="languages">
+        <div class="container">
+          <h2 class="title">Expertos en:</h2>
+
+          <article>
+            <img src="assets/html-5.svg" alt="html" />
+            <img src="assets/css-3.svg" alt="css" />
+            <img src="assets/javascript.svg" alt="js" />
+            <img src="assets/react.svg" alt="react" />
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer - Pie de Página -->
+
+    <footer>
+      <section class="container">
+        <article class="footer__texts">
+          <h2 class="title">Contáctanos</h2>
+
+          <div>
+            <a href="#" class="footer__icon fa-brands fa-facebook"></a>
+            <a href="#" class="footer__icon fa-brands fa-twitter"></a>
+            <a href="#" class="footer__icon fa-brands fa-instagram"></a>
+          </div>
+
+          <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Sobre nosotros</a>
+            <a href="#">Trabajos</a>
+          </nav>
+
+          <p>Derechos reservados &copy; Ignacio Martínez Torres</p>
+        </article>
+
+        <figure>
+          <img src="assets/mail.svg" alt="email" />
+        </figure>
+      </section>
+    </footer>
+  </body>
+</html>
