@@ -48,7 +48,7 @@ body {
   aspect-ratio: 1 / 1;
 }
 
-/* Irregular Gallery Styles */
+/* Galeria irregular */
 .galeria-irregular {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
