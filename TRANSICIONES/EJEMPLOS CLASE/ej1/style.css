@@ -1,0 +1,64 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* 1. Contenedor principal: Contexto de posición */
+.caja {
+    width: 180px;
+    height: 150px;
+    background-color: black;
+    /* Establece el contexto para los hijos con position: absolute */
+    position: relative; 
+    overflow: hidden; /* Oculta cualquier cosa que se desborde */
+}
+
+/* 2. Estilo y Posición del Texto */
+.texto-menu {
+    font-weight: bold;
+    text-align: center;
+    line-height: 150px; /* Centra el texto verticalmente */
+    
+    /* Posicionamiento: fluye sobre el padre, no desplaza a otros elementos */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Z-Index: Capa inferior. El texto se verá cuando la persiana no cubra */
+    z-index: 20; 
+}
+
+/* 3. Estilo y Posición de la Persiana */
+.persiana {
+    width: 180px;
+    height: 10px;
+    
+    /* Posicionamiento: fluye sobre el padre, no desplaza a otros elementos */
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    /* Z-Index: Capa superior. La persiana cubrirá el texto al expandirse */
+    z-index: 30; 
+    transition: height 1s ease-out;
+}
+
+/* Comportamiento al hacer hover: Aplica la transición al contenedor de la persiana */
+.caja:hover .persiana {
+    height: 150px;
+}
+
+/* Colores del texto */
+.texto-rojo { color: red; }
+.texto-verde { color: green; }
+.texto-amarillo { color: yellow; }
+.texto-morado { color: purple; }
+
+/* Colores de las persianas */
+.persiana1 { background-color: red; }
+.persiana2 { background-color: green; }
+.persiana3 { background-color: yellow; }
+.persiana4 { background-color: purple; }
