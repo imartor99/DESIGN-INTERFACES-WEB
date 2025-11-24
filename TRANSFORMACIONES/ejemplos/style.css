@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 400vh;
+}
+
+.container {
+  outline: 2px solid crimson;
+  height: 500px;
+  width: 90%;
+  margin: 60px auto;
+}
+
+.element {
+  background-color: steelblue;
+  width: 150px;
+  height: 150px;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+  /* transform: translateX(-20px); */
+  /* transform: translate(-30%, -10%); */
+  transition: transform 1s;
+
+ 
+
+  /* transform: rotate(60deg); */
+}
+
+.container:hover .element {
+  transform: translate(100%, 100%) rotate(45deg) scale(1.5);
+  /* transform: rotate(60deg); */
+  transition: transform 1s;
+}
