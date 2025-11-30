@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <!-- Fondo con clip-path e imagen -->
+      <div class="background-main">
+        <img
+          src="img/illustration.svg"
+          alt="Ilustración de contacto"
+          class="imagen"
+        />
+      </div>
+
+      <!-- Contenido del formulario -->
+      <div class="form-container">
+        <div class="form-header">
+          <h2>Nos mantenemos en contacto</h2>
+        </div>
+
+        <form>
+          <div class="input-group">
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Ingresa tu nombre:"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Ingresa tu email:"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              placeholder="Mensaje..."
+              rows="5"
+              required
+            ></textarea>
+          </div>
+          <button type="submit">Enviar ahora</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
