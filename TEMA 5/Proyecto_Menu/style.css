@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #fff;
+}
+
+/* Fondo rojo con clip-path */
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #eb5555;
+  clip-path: polygon(0 0, 30% 0, 30% 100%, 0% 100%);
+  z-index: -1;
+}
+
+/* Contenedor del contenido */
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 50px;
+  gap: 80px;
+  position: relative;
+}
+
+/* Estilos de Imagen */
+.container-image {
+  position: relative;
+  width: 450px;
+  height: 550px;
+}
+
+.container-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Capa de Tinte Rojo */
+.container-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 80, 40, 0.65);
+  mix-blend-mode: multiply; /* mantiene el contraste entre luces y sombras */
+}
+
+/* Estilos de Contenido */
+.content-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.content-text h1 {
+  font-size: 3.5rem;
+  color: #000;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.content-text p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 18px 45px;
+  background-color: #eb5555;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    box-shadow: 0 6px 20px rgba(235, 85, 85, 0.4);
+  }
+  100% {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.btn:hover {
+  background-color: #d64545;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(235, 85, 85, 0.3);
+  animation: none;
+}
+
+/* Botón de Menú */
+.menu-toggle {
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  background-color: #3b3f5c;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Checkbox Oculto */
+#active {
+  display: none;
+}
+
+/* Menú Desplegable */
+.desplegable {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #54ac85;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Estado inicial: circulo pequeño en la posicion del boton */
+  clip-path: circle(0% at calc(100% - 80px) 70px);
+  transition: clip-path 0.6s ease-in-out;
+  pointer-events: none; /* hace que el desplegable no intefiera en la interaccion con la pagina principal*/
+}
+
+/* Estado Activo mediante Checkbox  */
+#active:checked ~ .desplegable {
+  clip-path: circle(150% at calc(100% - 80px) 70px);
+  pointer-events: all;
+}
+
+.desplegable nav ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.desplegable nav ul li {
+  margin: 20px 0;
+}
+
+.desplegable nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: opacity 0.3s ease;
+}
+
+.desplegable nav ul li a:hover {
+  opacity: 0.7;
+}
+
+/* Estilos del Botón de Cerrar */
+.close-btn {
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  background-color: #3b3f5c;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}

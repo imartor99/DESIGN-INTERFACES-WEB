@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <title>Aprende CSS con Ana Fuentes</title>
+  </head>
+  <body>
+    <!-- Checkbox Oculto para manejar el menu desplegable-->
+    <input type="checkbox" id="active" />
+
+    <!-- Fondo rojo con clip-path -->
+    <main class="container"></main>
+
+    <!-- Contenido principal -->
+    <section class="content-wrapper">
+      <div class="container-image">
+        <img src="img/img.jpg" alt="Ana Fuentes" />
+      </div>
+
+      <div class="content-text">
+        <h1>Aprende CSS Con Ana Fuentes</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+          quisquam quibusdam est ipsa temporibus iusto optio odio. Inventore
+          deleniti perferendis dicta nostrum repudiandae impedit enim explicabo
+          temporibus, provident velit repellat.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+          quisquam quibusdam est ipsa temporibus iusto optio odio. Inventore
+          deleniti perferendis dicta nostrum repudiandae impedit enim explicabo
+          temporibus, provident velit repellat.
+        </p>
+        <a href="#" class="btn">Entra ahora</a>
+      </div>
+    </section>
+
+    <!-- Menú Desplegable -->
+    <div class="desplegable">
+      <label for="active" class="close-btn">
+        <i class="fas fa-times"></i>
+      </label>
+      <nav>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Acerca de</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <label for="active" class="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </label>
+  </body>
+</html>
