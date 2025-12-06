@@ -32,4 +32,4 @@ El contenido está organizado por temáticas:
 
 ---
 
-_Este repositorio es parte del trabajo de clase de 2º de DAW._
+_Este repositorio es parte del trabajo de clase de Ignacio Martínez Torres 2º de DAW._
