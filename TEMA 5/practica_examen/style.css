@@ -12,6 +12,7 @@
   --background-color2: #bf8969;
   --font-color1: #8c0e31;
 }
+
 /* SECCIÓN 1 - HERO / PORTADA */
 .seccion1 {
   background-color: var(--background-color1);
@@ -36,6 +37,7 @@
     transform: translateY(100vh);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -79,6 +81,7 @@
     transform: translateX(100vw);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
@@ -262,6 +265,7 @@
     transform: translate(100%, -100%);
     opacity: 0;
   }
+
   to {
     transform: translate(0, 0);
     opacity: 0.7;
@@ -322,6 +326,7 @@
   font-size: 6rem;
   margin: 20px 0;
 }
+
 .card a {
   color: var(--font-color1);
   border-radius: 4px;
@@ -429,4 +434,183 @@ footer {
   text-align: center;
   font-weight: bold;
   padding: 10px;
+}
+
+/* RESPONSIVE */
+
+/* Móvil */
+@media (max-width: 845px) {
+  /* Sección 1 - Hero */
+  .seccion1 {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+
+  .content-text {
+    position: static;
+    width: 100%;
+    padding: 20px;
+    height: auto;
+  }
+
+  .content-text h1 {
+    position: static;
+    font-size: 2rem;
+    text-align: center;
+    transform: none;
+    width: 100%;
+  }
+
+  .content-text h4 {
+    position: static;
+    font-size: 1rem;
+    text-align: center;
+    transform: none;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .content-img {
+    position: static;
+    width: 100%;
+    margin-top: 30px;
+    height: auto;
+  }
+
+  .content-img img {
+    position: static;
+    width: 80%;
+    height: auto;
+    max-width: 300px;
+    transform: none;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* Sección 2 - Galería */
+  .seccion2 {
+    padding: 30px 20px;
+  }
+  .content-btn2 {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+  .content-btn2 a {
+    width: auto;
+    padding: 10px 30px;
+    font-size: 1rem;
+  }
+  .content-text2 {
+    margin: 40px auto;
+  }
+  .content-text2 h3 {
+    font-size: 1.8rem;
+  }
+  .galeria {
+    width: 90%;
+    gap: 15px;
+  }
+  .galeria-item {
+    width: 100%;
+  }
+
+  /* Sección 3 - Tabla de Precios */
+  .seccion3 {
+    padding: 30px 20px;
+  }
+
+  .seccion3 h3 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+  }
+
+  .seccion3 .cards {
+    width: 90%;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card i {
+    font-size: 4rem;
+  }
+
+  /* Sección 4 - Formulario de Contacto */
+  .seccion4 {
+    flex-direction: column;
+  }
+
+  .formulario {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .formulario h3 {
+    font-size: 1.4rem;
+  }
+
+  .formulario h3::after {
+    width: 120px;
+  }
+
+  .formulario form button {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .content-img4 {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 846px) and (max-width: 1024px) {
+  /* Sección 1 - Hero */
+  .content-text h1 {
+    font-size: 3rem;
+  }
+
+  .content-text h4 {
+    font-size: 1.1rem;
+  }
+
+  /* Sección 2 - Galería */
+  .galeria {
+    width: 80%;
+  }
+
+  .galeria-item {
+    width: calc(50% - 10px);
+  }
+
+  /* Sección 3 - Tabla de Precios */
+  .seccion3 .cards {
+    width: 80%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .card:nth-child(3) {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+
+  /* Sección 4 - Formulario */
+  .formulario {
+    padding: 60px;
+  }
+
+  .content-img4 {
+    padding: 80px;
+  }
 }
