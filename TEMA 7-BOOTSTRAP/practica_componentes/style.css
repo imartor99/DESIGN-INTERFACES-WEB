@@ -1,0 +1,17 @@
+/* Barras de Progreso */
+.progreso-sm {
+  height: 10px;
+}
+
+.progreso-md {
+  height: 15px;
+}
+
+.ancho-60 {
+  width: 60%;
+}
+
+/* Desplegable Horizontal */
+.contenedor-desplegable {
+  min-height: 170px;
+}
