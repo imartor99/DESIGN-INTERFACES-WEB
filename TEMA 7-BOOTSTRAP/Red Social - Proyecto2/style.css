@@ -1,0 +1,96 @@
+/* Estilos Generales */
+body {
+  background-color: #18191a !important; /* Fondo oscuro */
+  color: white; /* Texto blanco */
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: #3a3b3c !important; /* Gris Facebook */
+}
+
+/* Logo y Buscador */
+.search-bg {
+  background-color: #3a3b3c !important; /* Gris Facebook */
+}
+
+.input-group input::placeholder {
+  color: #b0b3b8; /* Gris claro para el texto "Buscar" */
+}
+
+/* Ajuste de tamaño para que quede igual a la foto */
+.form-control {
+  width: 240px; /* Ancho fijo como en escritorio */
+}
+
+/* Parte derecha NAVBAR */
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #3a3b3c;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.icon-circle:hover {
+  background-color: #4e4f50;
+}
+
+/* Hover para elementos del navbar (Perfil y menú central) */
+/* Clase genérica para Hover Gris (Navbar, Sidebar, etc.) */
+.hover-gray {
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.hover-gray:hover {
+  background-color: #3a3b3c !important; /* Gris oscuro al pasar ratón */
+}
+
+/* Sidebar Sticky */
+.custom-sticky {
+  position: sticky;
+  top: 80px;
+  height: calc(100vh - 90px);
+  overflow-y: auto;
+}
+
+/* Efecto Focus para el Buscador (Doble Borde Continuo) */
+/* Aplicamos el efecto al contenedor .input-group para evitar cortes entre la lupa y el input */
+.input-group:focus-within {
+  border-radius: 50rem; /* Asegurar forma de píldora en el contenedor */
+
+  /* Color invertido: Anillo azul (#2e89ff) de 1px dentro, Anillo blanco (#fff) de 3px (2px visibles) fuera */
+  box-shadow:
+    0 0 0 1px #2e89ff,
+    0 0 0 3px #fff;
+  z-index: 5; /* Poner por encima para que se vea bien */
+}
+
+.hover-subray {
+  transition: text-decoration 0.2s;
+  cursor: pointer;
+}
+
+.hover-subray:hover {
+  text-decoration: underline !important;
+}
+
+/* Placeholder blanco custom */
+.placeholder-white::placeholder {
+  color: #b0b3b8 !important; /* Gris "Facebook" para placeholder */
+  opacity: 1;
+}
+
+/* Padding extra para el feed central */
+/* Ancho máximo para el feed central (Estilo Facebook) */
+@media (min-width: 992px) {
+  /* Solo en pantallas grandes */
+  .px-custom {
+    max-width: 590px !important; /* Ancho típico de feed */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 2rem !important;
+  }
+}
