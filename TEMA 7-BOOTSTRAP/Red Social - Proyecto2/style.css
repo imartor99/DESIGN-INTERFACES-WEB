@@ -94,3 +94,14 @@ body {
     margin-bottom: 2rem !important;
   }
 }
+
+/* Ajuste de margen superior para el contenido principal */
+.main-content-padding {
+  padding-top: 140px !important; /* 140px para asegurar (NavBar doble + margen) */
+}
+
+@media (min-width: 992px) {
+  .main-content-padding {
+    padding-top: 80px !important; /* Escritorio: NavBar normal */
+  }
+}
