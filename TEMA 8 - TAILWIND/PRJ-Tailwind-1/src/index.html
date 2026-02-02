@@ -1,13 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="output.css">
-    <title>Document</title>
-</head>
-<body>
-    <h1 class="bg-red-500 bg-"></h1>
-    
-</body>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <title>Suscripción al Boletín</title>
+  </head>
+  <body class="bg-gray-700 p-8 h-screen flex items-center justify-center">
+    <!-- Card Container -->
+    <div
+      class="bg-gray-800 rounded-2xl flex flex-col md:flex-row max-w-4xl w-full shadow-2xl overflow-hidden"
+    >
+      <!-- Imagen Section -->
+      <div class="md:w-1/3 h-64 md:h-auto p-3">
+        <img
+          src="https://picsum.photos/400/600"
+          alt="Comida saludable"
+          class="w-full h-full object-cover rounded-xl"
+        />
+      </div>
+
+      <!-- Contenido Section -->
+      <div class="md:w-2/3 p-10 flex flex-col justify-center">
+        <h2 class="text-white text-3xl font-serif mb-4">
+          Recibe consejos de dieta y fitness en tu bandeja de entrada
+        </h2>
+        <p class="text-gray-400 mb-8 max-w-lg">
+          Come mejor y haz ejercicio mejor. Suscríbete al boletín Diet&Fitness
+        </p>
+
+        <!-- Formulario -->
+        <form class="flex flex-col sm:flex-row gap-4">
+          <input
+            type="email"
+            placeholder="Inserta tu email"
+            class="bg-transparent border border-gray-600 text-white placeholder-gray-500 px-4 py-3 rounded w-full sm:w-80 focus:outline-none focus:border-lime-500 transition-colors"
+          />
+          <button
+            type="button"
+            class="bg-lime-500 hover:bg-lime-700 text-gray-900 hover:text-white font-bold py-3 px-6 rounded transition duration-300"
+          >
+            Subscribete
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>
